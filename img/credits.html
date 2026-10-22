@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#102d1c">
+  <meta name="description" content="Nguồn ảnh, tác giả và giấy phép hình ảnh sử dụng trong Cẩm Nang Số Quận 1.">
+  <title>Nguồn Ảnh & Ghi Công — Cẩm Nang Số Quận 1</title>
+  <style>
+    :root {
+      --pine: #102d1c;
+      --pine-2: #143823;
+      --pine-3: #1a6b3c;
+      --gold: #d4af37;
+      --gold-pale: #f0df9e;
+      --paper: #f5f2e9;
+      --paper-2: #fffdf7;
+      --ink: #1c2a20;
+      --muted: #657268;
+      --line: rgba(16, 45, 28, .13);
+      --warn: #8c4b24;
+      --warn-bg: #fff0df;
+      --ok-bg: #e6f0e5;
+      --radius: 18px;
+      --shadow: 0 14px 35px rgba(16, 45, 28, .09);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.6;
+    }
+    a { color: #17613b; text-underline-offset: 3px; }
+    a:hover { color: #8b6d13; }
+    .container { width: min(1160px, calc(100% - 40px)); margin-inline: auto; }
+    .site-header { background: var(--pine); color: #fff; border-bottom: 1px solid rgba(212,175,55,.4); }
+    .header-inner { min-height: 78px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+    .brand { display: inline-flex; align-items: center; gap: 12px; color: #fff; text-decoration: none; min-width: 0; }
+    .brand-mark { display: grid; place-items: center; width: 44px; height: 44px; flex: 0 0 44px; border: 1px solid var(--gold); border-radius: 13px; color: var(--gold-pale); font-weight: 850; letter-spacing: -.04em; }
+    .brand-copy { display: flex; flex-direction: column; line-height: 1.25; }
+    .brand-copy strong { font-size: 15px; letter-spacing: .01em; }
+    .brand-copy small { color: rgba(255,255,255,.62); font-size: 11px; margin-top: 4px; }
+    .back-link { color: var(--gold-pale); font-size: 13px; font-weight: 700; text-decoration: none; white-space: nowrap; }
+    .back-link:hover { color: #fff; }
+    .hero {
+      position: relative;
+      overflow: hidden;
+      color: #fff;
+      padding: clamp(54px, 8vw, 100px) 0 46px;
+      background:
+        radial-gradient(ellipse at 78% 0%, rgba(212,175,55,.18), transparent 37%),
+        radial-gradient(ellipse at 10% 90%, rgba(46,119,73,.36), transparent 42%),
+        linear-gradient(135deg, #143823, #08170e 78%);
+    }
+    .hero::after { content: ""; position: absolute; inset: 0; pointer-events: none; opacity: .16; background-image: linear-gradient(rgba(255,255,255,.07) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.07) 1px, transparent 1px); background-size: 44px 44px; mask-image: linear-gradient(to bottom, black, transparent); }
+    .hero-content { position: relative; z-index: 1; max-width: 850px; }
+    .eyebrow { display: inline-flex; align-items: center; gap: 10px; color: var(--gold-pale); font-size: 10px; font-weight: 850; letter-spacing: .19em; text-transform: uppercase; }
+    .eyebrow::before { content: ""; width: 28px; height: 1px; background: var(--gold); }
+    h1 { margin: 20px 0 16px; max-width: 800px; font-family: Georgia, "Times New Roman", serif; font-size: clamp(42px, 7vw, 76px); line-height: .99; font-weight: 500; letter-spacing: -.045em; }
+    h1 em { color: var(--gold-pale); font-weight: 400; }
+    .hero-lede { max-width: 680px; margin: 0; color: rgba(255,255,255,.75); font-size: clamp(15px, 2vw, 18px); }
+    .hero-footer { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin-top: 32px; color: rgba(255,255,255,.62); font-size: 11px; letter-spacing: .1em; text-transform: uppercase; }
+    .hero-footer .line { height: 1px; width: 46px; background: rgba(212,175,55,.65); }
+    .stats { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 12px; margin-top: -1px; padding: 20px 0 22px; }
+    .stat { padding: 17px 20px; background: rgba(255,253,247,.78); border: 1px solid var(--line); border-radius: 14px; display: flex; align-items: center; gap: 14px; }
+    .stat-num { color: var(--pine-3); font-family: Georgia, serif; font-size: 31px; line-height: 1; }
+    .stat-label { color: var(--muted); font-size: 12px; line-height: 1.4; }
+    main { padding: 24px 0 78px; }
+    .intro-note { display: grid; grid-template-columns: 1.4fr 1fr; gap: 28px; margin: 18px 0 32px; padding: 24px 26px; background: var(--paper-2); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); }
+    .intro-note h2 { margin: 0 0 8px; color: var(--pine); font-family: Georgia, serif; font-size: 25px; font-weight: 500; letter-spacing: -.02em; }
+    .intro-note p { margin: 0; color: var(--muted); font-size: 13px; }
+    .format-example { align-self: center; padding-left: 22px; border-left: 2px solid var(--gold); color: #48574c; font-size: 12px; }
+    .format-example strong { display: block; margin-bottom: 5px; color: var(--pine); font-size: 10px; letter-spacing: .12em; }
+    .section-heading { display: flex; align-items: end; justify-content: space-between; gap: 16px; margin: 44px 0 20px; }
+    .section-heading h2 { margin: 0; color: var(--pine); font-family: Georgia, serif; font-size: clamp(28px, 4vw, 40px); font-weight: 500; letter-spacing: -.035em; }
+    .section-heading p { margin: 7px 0 0; color: var(--muted); font-size: 13px; }
+    .section-count { color: #7b857c; font-size: 10px; font-weight: 800; letter-spacing: .13em; white-space: nowrap; }
+    .credit-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 18px; }
+    .credit-card { min-width: 0; overflow: hidden; background: var(--paper-2); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: 0 7px 22px rgba(16,45,28,.045); display: flex; flex-direction: column; }
+    .credit-image-wrap { position: relative; aspect-ratio: 16 / 9; overflow: hidden; background: #dfe5da; }
+    .credit-image { display: block; width: 100%; height: 100%; object-fit: cover; }
+    .credit-number { position: absolute; left: 12px; top: 12px; min-width: 30px; height: 30px; padding: 0 8px; display: grid; place-items: center; background: rgba(8,23,14,.82); color: var(--gold-pale); border: 1px solid rgba(212,175,55,.48); border-radius: 10px; font-size: 11px; font-weight: 800; backdrop-filter: blur(8px); }
+    .status { position: absolute; right: 11px; top: 11px; border-radius: 999px; padding: 5px 9px; font-size: 9px; font-weight: 850; letter-spacing: .07em; text-transform: uppercase; }
+    .status-ok { color: #184c2f; background: #e8f3e6; border: 1px solid #bdd7bb; }
+    .status-review { color: #7a3815; background: #fff0df; border: 1px solid #e8bb8f; }
+    .credit-body { padding: 18px; display: flex; flex-direction: column; flex: 1; }
+    .credit-kind { margin-bottom: 7px; color: #977716; font-size: 9px; font-weight: 850; letter-spacing: .15em; text-transform: uppercase; }
+    .credit-body h3 { margin: 0 0 13px; color: var(--pine); font-family: Georgia, serif; font-size: 21px; line-height: 1.16; font-weight: 500; letter-spacing: -.02em; }
+    .credit-meta { display: grid; gap: 11px; margin: 0; }
+    .credit-meta div { padding-top: 10px; border-top: 1px solid rgba(16,45,28,.09); }
+    .credit-meta dt { margin-bottom: 3px; color: #7b867c; font-size: 9px; font-weight: 850; letter-spacing: .13em; text-transform: uppercase; }
+    .credit-meta dd { margin: 0; color: #344339; overflow-wrap: anywhere; font-size: 12px; line-height: 1.5; }
+    .credit-meta dd a { font-weight: 650; }
+    .license-pill { display: inline-block; padding: 3px 7px; border-radius: 6px; background: var(--ok-bg); color: #24533a; font-size: 10px; font-weight: 800; text-decoration: none; }
+    .license-pill:hover { background: #d8e9d4; }
+    .review-box { margin-top: 13px; padding: 11px 12px; border-radius: 10px; background: var(--warn-bg); color: #74401f; font-size: 11px; line-height: 1.55; }
+    .credit-links { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin-top: auto; padding-top: 17px; }
+    .source-link { display: inline-flex; align-items: center; gap: 6px; color: var(--pine-3); font-size: 11px; font-weight: 850; text-decoration: none; }
+    .source-link::after { content: "↗"; color: #a27d16; }
+    .source-link:hover { text-decoration: underline; }
+    .method-note { margin-top: 28px; padding: 19px 22px; border: 1px solid rgba(212,175,55,.45); border-radius: 14px; background: #fff9e7; color: #625635; font-size: 12px; }
+    .method-note strong { color: var(--pine); }
+    .tools-section { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-top: 22px; }
+    .tool-card { padding: 20px; background: rgba(255,253,247,.75); border: 1px solid var(--line); border-radius: 14px; }
+    .tool-card h3 { margin: 0 0 7px; color: var(--pine); font-family: Georgia, serif; font-size: 20px; font-weight: 500; }
+    .tool-card p { margin: 0; color: var(--muted); font-size: 12px; }
+    .site-footer { background: var(--pine); color: rgba(255,255,255,.67); border-top: 1px solid rgba(212,175,55,.45); }
+    .footer-inner { display: flex; align-items: center; justify-content: space-between; gap: 20px; min-height: 90px; padding: 18px 0; }
+    .footer-inner p { margin: 0; font-size: 11px; }
+    .footer-inner a { color: var(--gold-pale); text-decoration: none; font-size: 12px; font-weight: 800; }
+    @media (max-width: 900px) { .credit-grid { grid-template-columns: repeat(2, minmax(0,1fr)); } }
+    @media (max-width: 640px) {
+      .container { width: min(100% - 28px, 1160px); }
+      .header-inner { min-height: 68px; }
+      .brand-mark { width: 38px; height: 38px; flex-basis: 38px; }
+      .brand-copy strong { font-size: 13px; }
+      .brand-copy small { font-size: 10px; }
+      .back-link { font-size: 11px; }
+      .stats { grid-template-columns: 1fr; padding-top: 14px; }
+      .stat { padding: 12px 16px; }
+      .intro-note { grid-template-columns: 1fr; padding: 20px; gap: 16px; }
+      .format-example { padding-left: 14px; }
+      .section-heading { align-items: start; flex-direction: column; }
+      .credit-grid { grid-template-columns: 1fr; }
+      .credit-body { padding: 17px; }
+      .tools-section { grid-template-columns: 1fr; }
+      .footer-inner { align-items: start; flex-direction: column; justify-content: center; gap: 9px; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
+  </style>
+</head>
+<body id="top">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Quay về Cẩm nang số Quận 1">
+        <span class="brand-mark">Q1</span>
+        <span class="brand-copy"><strong>Cẩm Nang Số Quận 1</strong><small>Nguồn ảnh & Ghi Công Tác Giả</small></span>
+      </a>
+      <a class="back-link" href="index.html">← Quay lại trang chủ</a>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container hero-content">
+      <span class="eyebrow">TÔN TRỌNG BẢN QUYỀN TÁC GIẢ</span>
+      <h1>Nguồn Ảnh <em>&amp; Ghi Công</em></h1>
+      <p class="hero-lede">Những bức ảnh tuyệt vời trên giúp kể nên câu chuyện về Sài Gòn với bạn bè thế giới. Việc ghi lại thông tin tác giả, nguồn và giấy phép của hình ảnh vì thế rất quan trọng.</p>
+      <div class="hero-footer"><span class="line"></span><span>Tiêu Đề · Tác Giả · Nguồn · Giấy Phép</span><span class="line"></span></div>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="stats" aria-label="Tình trạng Ghi công">
+      <div class="stat"><span class="stat-num">17</span><span class="stat-label">Vị trí hình ảnh được liệt kê<br>bao gồm ảnh nền hero</span></div>
+      <div class="stat"><span class="stat-num">15</span><span class="stat-label">Nguồn Commons có thông tin<br>tác giả và giấy phép xác định</span></div>
+      <div class="stat"><span class="stat-num">02</span><span class="stat-label">Ảnh bên ngoài cần xác minh<br>tác giả / quyền sử dụng</span></div>
+    </div>
+  </div>
+
+  <main class="container">
+    <section class="intro-note" aria-labelledby="why-credits">
+      <div>
+        <h2 id="why-credits">Vì sao có trang này?</h2>
+        <p>Các nguồn được ghi cụ thể thay vì chỉ ghi “Google” hoặc “Wikimedia”. Với ảnh Creative Commons, trang cung cấp liên kết tới trang tệp gốc và giấy phép tương ứng để người xem có thể kiểm tra thông tin. Hai ảnh lấy trực tiếp từ website bên ngoài chưa có giấy phép rõ ràng được đánh dấu riêng, không gán tác giả hoặc giấy phép khi chưa xác minh.</p>
+      </div>
+      <div class="format-example"><strong>MẪU Ghi công</strong>“Tên ảnh” — tác giả — nguồn ảnh — giấy phép. Ảnh hiển thị có thể được cắt khung bằng CSS để phù hợp với bố cục; tệp ảnh gốc không được tuyên bố là đã chỉnh sửa.</div>
+    </section>
+
+    <div class="section-heading">
+      <div><h2>Hình ảnh các điểm đến</h2><p>Ảnh đang được tham chiếu trong dữ liệu của các thẻ địa điểm.</p></div>
+      <span class="section-count">16 ĐIỂM ĐẾN</span>
+    </div>
+
+    <section class="credit-grid" aria-label="Ghi công ảnh điểm đến">
+      <article class="credit-card">
+        <div class="credit-image-wrap"><img class="credit-image" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/20190923%20Independence%20Palace-2.jpg?width=600" alt="Mặt tiền Dinh Độc Lập" loading="lazy"><span class="credit-number">01</span><span class="status status-ok">Đã xác minh</span></div>
+        <div class="credit-body"><span class="credit-kind">Di tích lịch sử</span><h3>Dinh Độc Lập</h3><dl class="credit-meta"><div><dt>Tên ảnh</dt><dd>20190923 Independence Palace-2.jpg</dd></div><div><dt>Tác giả</dt><dd><a href="https://commons.wikimedia.org/wiki/User:Balon_Greyjoy" target="_blank" rel="noopener noreferrer">Balon Greyjoy</a></dd></div><div><dt>Nguồn</dt><dd>Wikimedia Commons · ảnh mặt tiền Dinh Độc Lập</dd></div><div><dt>Giấy phép</dt><dd><a class="license-pill" href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank" rel="noopener noreferrer">CC0 1.0</a></dd></div></dl><div class="credit-links"><a class="source-link" href="https://commons.wikimedia.org/wiki/File:20190923_Independence_Palace-2.jpg" target="_blank" rel="noopener noreferrer">Trang ảnh gốc</a></div></div>
+      </article>
+
+      <article class="credit-card">
+        <div class="credit-image-wrap"><img class="credit-image" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/2023-12-10%20B%E1%BA%BFn%20Th%C3%A0nh%20Market%20%28Ch%E1%BB%A3%20B%E1%BA%BFn%20Th%C3%A0nh%29%2001.jpg?width=600" alt="Cửa tây Chợ Bến Thành" loading="lazy"><span class="credit-number">02</span><span class="status status-ok">Đã xác minh</span></div>
+        <div class="credit-body"><span class="credit-kind">Văn hóa & mua sắm</span><h3>Chợ Bến Thành</h3><dl class="credit-meta"><div><dt>Tên ảnh</dt><dd>2023-12-10 Bến Thành Market (Chợ Bến Thành) 01.jpg</dd></div><div><dt>Tác giả</dt><dd><a href="https://commons.wikimedia.org/wiki/User:%E6%BA%90%E7%BE%A9%E4%BF%A1" target="_blank" rel="noopener noreferrer">源義信</a></dd></div><div><dt>Nguồn</dt><dd>Wikimedia Commons · cửa tây Chợ Bến Thành</dd></div><div><dt>Giấy phép</dt><dd><a class="license-pill" href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a></dd></div></dl><div class="credit-links"><a class="source-link" href="https://commons.wikimedia.org/wiki/File:2023-12-10_B%E1%BA%BFn_Th%C3%A0nh_Market_%28Ch%E1%BB%A3_B%E1%BA%BFn_Th%C3%A0nh%29_01.jpg" target="_blank" rel="noopener noreferrer">Trang ảnh gốc</a></div></div>
+      </article>
+
+      <article class="credit-card">
+        <div class="credit-image-wrap"><img class="credit-image" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/20190923%20Saigon%20Central%20Post%20Office-1.jpg?width=600" alt="Bưu điện Trung tâm Sài Gòn" loading="lazy"><span class="credit-number">03</span><span class="status status-ok">Đã xác minh</span></div>
+        <div class="credit-body"><span class="credit-kind">Kiến trúc</span><h3>Bưu điện Trung tâm Sài Gòn</h3><dl class="credit-meta"><div><dt>Tên ảnh</dt><dd>20190923 Saigon Central Post Office-1.jpg</dd></div><div><dt>Tác giả</dt><dd><a href="https://commons.wikimedia.org/wiki/User:Balon_Greyjoy" target="_blank" rel="noopener noreferrer">Balon Greyjoy</a></dd></div><div><dt>Nguồn</dt><dd>Wikimedia Commons</dd></div><div><dt>Giấy phép</dt><dd><a class="license-pill" href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank" rel="noopener noreferrer">CC0 1.0</a></dd></div></dl><div class="credit-links"><a class="source-link" href="https://commons.wikimedia.org/wiki/File:20190923_Saigon_Central_Post_Office-1.jpg" target="_blank" rel="noopener noreferrer">Trang ảnh gốc</a></div></div>
+      </article>
+
+      <article class="credit-card">
+        <div class="credit-image-wrap"><img class="credit-image" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/2023-12-10%20Notre-Dame%20Cathedral%20Basilica%20of%20Saigon%20%28Nh%C3%A0%20th%E1%BB%9D%20ch%C3%ADnh%20t%C3%B2a%20%C4%90%E1%BB%A9c%20B%C3%A0%20S%C3%A0i%20G%C3%B2n%29%2002.jpg?width=600" alt="Nhà thờ Đức Bà Sài Gòn" loading="lazy"><span class="credit-number">04</span><span class="status status-ok">Đã xác minh</span></div>
+        <div class="credit-body"><span class="credit-kind">Kiến trúc</span><h3>Nhà thờ Đức Bà Sài Gòn</h3><dl class="credit-meta"><div><dt>Tên ảnh</dt><dd>2023-12-10 Notre-Dame Cathedral Basilica of Saigon 02.jpg</dd></div><div><dt>Tác giả</dt><dd><a href="https://commons.wikimedia.org/wiki/User:%E6%BA%90%E7%BE%A9%E4%BF%A1" target="_blank" rel="noopener noreferrer">源義信</a></dd></div><div><dt>Nguồn</dt><dd>Wikimedia Commons</dd></div><div><dt>Giấy phép</dt><dd><a class="license-pill" href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a></dd></div></dl><div class="credit-links"><a class="source-link" href="https://commons.wikimedia.org/wiki/File:2023-12-10_Notre-Dame_Cathedral_Basilica_of_Saigon_%28Nh%C3%A0_th%E1%BB%9F_ch%C3%ADnh_t%C3%B2a_%C4%90%E1%BB%A9c_B%C3%A0_S%C3%A0i_G%C3%B2n%29_02.jpg" target="_blank" rel="noopener noreferrer">Trang ảnh gốc</a></div></div>
+      </article>
+
+      <article class="credit-card">
+        <div class="credit-image-wrap"><img class="credit-image" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/20180413%20215356Nguy%E1%BB%85n%20Hu%E1%BB%87%20Walking%20Street.jpg?width=600" alt="Phố đi bộ Nguyễn Huệ" loading="lazy"><span class="credit-number">05</span><span class="status status-ok">Đã xác minh</span></div>
+        <div class="credit-body"><span class="credit-kind">Giải trí & check-in</span><h3>Phố đi bộ Nguyễn Huệ</h3><dl class="credit-meta"><div><dt>Tên ảnh</dt><dd>20180413 215356Nguyễn Huệ Walking Street.jpg</dd></div><div><dt>Tác giả</dt><dd>Choi Kwangmo</dd></div><div><dt>Nguồn</dt><dd><a href="https://choegwangmo.com/2020/03/08/saigon-hotpot-night-food-tour-thanh-pho-ho-chi-minh-april-13-2018/" target="_blank" rel="noopener noreferrer">Bài ảnh gốc của tác giả</a> · Wikimedia Commons</dd></div><div><dt>Giấy phép</dt><dd><a class="license-pill" href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank" rel="noopener noreferrer">CC0 1.0</a></dd></div></dl><div class="credit-links"><a class="source-link" href="https://commons.wikimedia.org/wiki/File:20180413_215356Nguy%E1%BB%85n_Hu%E1%BB%87_Walking_Street.jpg" target="_blank" rel="noopener noreferrer">Trang ảnh gốc</a></div></div>
+      </article>
+
+      <article class="credit-card">
+        <div class="credit-image-wrap"><img class="credit-image" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Saigon%20Opera%20House%2C%20front.jpg?width=600" alt="Mặt tiền Nhà hát Thành phố" loading="lazy"><span class="credit-number">06</span><span class="status status-ok">Đã xác minh</span></div>
+        <div class="credit-body"><span class="credit-kind">Kiến trúc</span><h3>Nhà hát Thành phố</h3><dl class="credit-meta"><div><dt>Tên ảnh</dt><dd>Saigon Opera House, front.jpg</dd></div><div><dt>Tác giả</dt><dd><a href="https://commons.wikimedia.org/wiki/User:TomW712" target="_blank" rel="noopener noreferrer">TomW712</a></dd></div><div><dt>Nguồn</dt><dd>Wikimedia Commons · mặt tiền nhà hát</dd></div><div><dt>Giấy phép</dt><dd><a class="license-pill" href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 3.0</a></dd></div></dl><div class="credit-links"><a class="source-link" href="https://commons.wikimedia.org/wiki/File:Saigon_Opera_House%2C_front.jpg" target="_blank" rel="noopener noreferrer">Trang ảnh gốc</a></div></div>
+      </article>
+
+      <article class="credit-card">
+        <div class="credit-image-wrap"><img class="credit-image" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Bitexco%20financial%20tower.jpg?width=600" alt="Tháp Tài chính Bitexco" loading="lazy"><span class="credit-number">07</span><span class="status status-ok">Đã xác minh</span></div>
+        <div class="credit-body"><span class="credit-kind">Kiến trúc hiện đại</span><h3>Tháp Tài chính Bitexco</h3><dl class="credit-meta"><div><dt>Tên ảnh</dt><dd>Bitexco financial tower.jpg</dd></div><div><dt>Tác giả</dt><dd><a href="https://commons.wikimedia.org/wiki/User:Mattias811" target="_blank" rel="noopener noreferrer">Mattias Hill</a></dd></div><div><dt>Nguồn</dt><dd>Wikimedia Commons</dd></div><div><dt>Giấy phép</dt><dd><a class="license-pill" href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 3.0</a></dd></div></dl><div class="credit-links"><a class="source-link" href="https://commons.wikimedia.org/wiki/File:Bitexco_financial_tower.jpg" target="_blank" rel="noopener noreferrer">Trang ảnh gốc</a></div></div>
+      </article>
+
+      <article class="credit-card">
+        <div class="credit-image-wrap"><img class="credit-image" src="https://immivietnam.com/Content/Uploads/images/Blog/2022/hcm/Bach-Dang-Wharf_Park.jpg" alt="Ảnh Bến Bạch Đằng hiện đang dùng trên trang" loading="lazy"><span class="credit-number">08</span><span class="status status-review">Cần xác minh</span></div>
+        <div class="credit-body"><span class="credit-kind">Giải trí & check-in</span><h3>Bến Bạch Đằng</h3><dl class="credit-meta"><div><dt>Tên / nguồn hiện dùng</dt><dd>Bach-Dang-Wharf_Park.jpg · ảnh được tải từ website ImmiVietnam</dd></div><div><dt>Tác giả</dt><dd>Chưa xác định từ URL ảnh hiện tại</dd></div><div><dt>Giấy phép</dt><dd>Chưa xác minh được từ trang tệp hiện tại</dd></div></dl><div class="review-box">Để Ghi công đúng, hãy xác minh nhiếp ảnh gia và quyền sử dụng, hoặc thay URL ảnh hiện tại bằng ảnh có trang giấy phép rõ ràng. <br><strong>Ảnh thay thế gợi ý:</strong> “Bến Bạch Đằng 2022” của <a href="https://commons.wikimedia.org/wiki/User:Kh%C3%B4ng_h%E1%BB%81_gi%E1%BA%A3_tr%C3%A2n" target="_blank" rel="noopener noreferrer">Không hề giả trân</a>, giấy phép <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a>.</div><div class="credit-links"><a class="source-link" href="https://immivietnam.com/Content/Uploads/images/Blog/2022/hcm/Bach-Dang-Wharf_Park.jpg" target="_blank" rel="noopener noreferrer">Ảnh đang dùng</a><a class="source-link" href="https://commons.wikimedia.org/wiki/File:B%E1%BA%BFn_B%E1%BA%A1ch_%C4%90%E1%BA%B1ng_2022.jpg" target="_blank" rel="noopener noreferrer">Ảnh thay thế có giấy phép</a></div></div>
+      </article>
+
+      <article class="credit-card">
+        <div class="credit-image-wrap"><img class="credit-image" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/2023-12-10%20Ho%20Chi%20Minh%20City%20Hall%2001.jpg?width=600" alt="Trụ sở UBND Thành phố Hồ Chí Minh" loading="lazy"><span class="credit-number">09</span><span class="status status-ok">Đã xác minh</span></div>
+        <div class="credit-body"><span class="credit-kind">Kiến trúc</span><h3>UBND Thành phố Hồ Chí Minh</h3><dl class="credit-meta"><div><dt>Tên ảnh</dt><dd>2023-12-10 Ho Chi Minh City Hall 01.jpg</dd></div><div><dt>Tác giả</dt><dd><a href="https://commons.wikimedia.org/wiki/User:%E6%BA%90%E7%BE%A9%E4%BF%A1" target="_blank" rel="noopener noreferrer">源義信</a></dd></div><div><dt>Nguồn</dt><dd>Wikimedia Commons</dd></div><div><dt>Giấy phép</dt><dd><a class="license-pill" href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a></dd></div></dl><div class="credit-links"><a class="source-link" href="https://commons.wikimedia.org/wiki/File:2023-12-10_Ho_Chi_Minh_City_Hall_01.jpg" target="_blank" rel="noopener noreferrer">Trang ảnh gốc</a></div></div></div>
+      </article>
+
+      <article class="credit-card">
+        <div class="credit-image-wrap"><img class="credit-image" src="https://teach.emg.vn/wp-content/uploads/2022/12/nguyen-van-binh-book-street-teaching-jobs-in-ho-chi-minh-city-teach.emg_.vn_.jpg" alt="Ảnh Đường sách Nguyễn Văn Bình hiện đang dùng trên trang" loading="lazy"><span class="credit-number">10</span><span class="status status-review">Cần xác minh</span></div>
+        <div class="credit-body"><span class="credit-kind">Văn hóa & mua sắm</span><h3>Đường sách Nguyễn Văn Bình</h3><dl class="credit-meta"><div><dt>Tên / nguồn hiện dùng</dt><dd>Ảnh được tải từ trang teach.emg.vn</dd></div><div><dt>Tác giả</dt><dd>Chưa xác định từ URL ảnh hiện tại</dd></div><div><dt>Giấy phép</dt><dd>Chưa xác minh được từ trang tệp hiện tại</dd></div></dl><div class="review-box">Ảnh đang hiển thị trong website, nhưng chưa đủ dữ liệu để khẳng định tác giả hoặc giấy phép. Xác minh với trang nguồn hoặc thay bằng ảnh có thông tin cấp phép rõ ràng. <br><strong>Ảnh thay thế gợi ý:</strong> “Nguyen Van Binh Street (52681309899).jpg” của <a href="https://www.flickr.com/people/31744041@N02" target="_blank" rel="noopener noreferrer">Kevin Rutherford</a>, giấy phép <a href="https://creativecommons.org/licenses/by-sa/2.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 2.0</a>.</div><div class="credit-links"><a class="source-link" href="https://teach.emg.vn/wp-content/uploads/2022/12/nguyen-van-binh-book-street-teaching-jobs-in-ho-chi-minh-city-teach.emg_.vn_.jpg" target="_blank" rel="noopener noreferrer">Ảnh đang dùng</a><a class="source-link" href="https://commons.wikimedia.org/wiki/File:Nguyen_Van_Binh_Street_%2852681309899%29.jpg" target="_blank" rel="noopener noreferrer">Ảnh thay thế có giấy phép</a></div></div>
+      </article>
+
+      <article class="credit-card">
+        <div class="credit-image-wrap"><img class="credit-image" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/42%20Nguyen%20Hue%20Boulevard%2C%20Saigon%20%2853547606514%29.jpg?width=600" alt="Chung cư 42 Nguyễn Huệ" loading="lazy"><span class="credit-number">11</span><span class="status status-ok">Đã xác minh</span></div>
+        <div class="credit-body"><span class="credit-kind">Giải trí & check-in</span><h3>Chung cư 42 Nguyễn Huệ</h3><dl class="credit-meta"><div><dt>Tên ảnh</dt><dd>42 Nguyen Hue Boulevard, Saigon (53547606514).jpg</dd></div><div><dt>Tác giả</dt><dd><a href="https://www.flickr.com/people/wbayercom/" target="_blank" rel="noopener noreferrer">Werner Bayer</a></dd></div><div><dt>Nguồn</dt><dd>Ảnh từ Flickr, được lưu trữ trên Wikimedia Commons</dd></div><div><dt>Giấy phép</dt><dd><a class="license-pill" href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank" rel="noopener noreferrer">CC0 1.0</a></dd></div></dl><div class="credit-links"><a class="source-link" href="https://commons.wikimedia.org/wiki/File:42_Nguyen_Hue_Boulevard%2C_Saigon_%2853547606514%29.jpg" target="_blank" rel="noopener noreferrer">Trang ảnh gốc</a></div></div>
+      </article>
+
+      <article class="credit-card">
+        <div class="credit-image-wrap"><img class="credit-image" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Ho%20Chi%20Minh%20City%20Museum.jpg?width=600" alt="Bảo tàng Thành phố Hồ Chí Minh" loading="lazy"><span class="credit-number">12</span><span class="status status-ok">Đã xác minh</span></div>
+        <div class="credit-body"><span class="credit-kind">Di tích lịch sử</span><h3>Bảo tàng Thành phố Hồ Chí Minh</h3><dl class="credit-meta"><div><dt>Tên ảnh</dt><dd>Ho Chi Minh City Museum.jpg</dd></div><div><dt>Tác giả</dt><dd><a href="https://www.flickr.com/photos/8721758@N06/4607962856/" target="_blank" rel="noopener noreferrer">Jorge Láscar</a></dd></div><div><dt>Nguồn</dt><dd>Ảnh từ Flickr, được lưu trữ trên Wikimedia Commons</dd></div><div><dt>Giấy phép</dt><dd><a class="license-pill" href="https://creativecommons.org/licenses/by-sa/2.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 2.0</a></dd></div></dl><div class="credit-links"><a class="source-link" href="https://commons.wikimedia.org/wiki/File:Ho_Chi_Minh_City_Museum.jpg" target="_blank" rel="noopener noreferrer">Trang ảnh gốc</a></div></div>
+      </article>
+
+      <article class="credit-card">
+        <div class="credit-image-wrap"><img class="credit-image" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Museum_of_Fine_Arts%2C_HCMC.jpg?width=600" alt="Bảo tàng Mỹ thuật Thành phố Hồ Chí Minh" loading="lazy"><span class="credit-number">13</span><span class="status status-ok">Đã xác minh</span></div>
+        <div class="credit-body"><span class="credit-kind">Văn hóa & nghệ thuật</span><h3>Bảo tàng Mỹ thuật TP.HCM</h3><dl class="credit-meta"><div><dt>Tên ảnh</dt><dd>Museum of Fine Arts, HCMC.jpg</dd></div><div><dt>Tác giả</dt><dd><a href="https://www.flickr.com/people/28697629@N00/" target="_blank" rel="noopener noreferrer">thalling55</a></dd></div><div><dt>Nguồn</dt><dd>Ảnh từ Flickr, được lưu trữ trên Wikimedia Commons</dd></div><div><dt>Giấy phép</dt><dd><a class="license-pill" href="https://creativecommons.org/licenses/by/2.0/" target="_blank" rel="noopener noreferrer">CC BY 2.0</a></dd></div></dl><div class="credit-links"><a class="source-link" href="https://commons.wikimedia.org/wiki/File:Museum_of_Fine_Arts%2C_HCMC.jpg" target="_blank" rel="noopener noreferrer">Trang ảnh gốc</a></div></div>
+      </article>
+
+      <article class="credit-card">
+        <div class="credit-image-wrap"><img class="credit-image" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/2023-12-10%20Mariamman%20Temple%2C%20Ho%20Chi%20Minh%20City%2001.jpg?width=600" alt="Đền Bà Mariamman" loading="lazy"><span class="credit-number">14</span><span class="status status-ok">Đã xác minh</span></div>
+        <div class="credit-body"><span class="credit-kind">Di sản văn hóa</span><h3>Chùa Bà Mariamman</h3><dl class="credit-meta"><div><dt>Tên ảnh</dt><dd>2023-12-10 Mariamman Temple, Ho Chi Minh City 01.jpg</dd></div><div><dt>Tác giả</dt><dd><a href="https://commons.wikimedia.org/wiki/User:%E6%BA%90%E7%BE%A9%E4%BF%A1" target="_blank" rel="noopener noreferrer">源義信</a></dd></div><div><dt>Nguồn</dt><dd>Wikimedia Commons</dd></div><div><dt>Giấy phép</dt><dd><a class="license-pill" href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a></dd></div></dl><div class="credit-links"><a class="source-link" href="https://commons.wikimedia.org/wiki/File:2023-12-10_Mariamman_Temple%2C_Ho_Chi_Minh_City_01.jpg" target="_blank" rel="noopener noreferrer">Trang ảnh gốc</a></div></div>
+      </article>
+
+      <article class="credit-card">
+        <div class="credit-image-wrap"><img class="credit-image" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Bui%20Vien%20Street%2C%20Ho%20Chi%20Minh%20City%2C%20at%20night%2C%202023%20%2804%29.jpg?width=600" alt="Phố Bùi Viện về đêm" loading="lazy"><span class="credit-number">15</span><span class="status status-ok">Đã xác minh</span></div>
+        <div class="credit-body"><span class="credit-kind">Giải trí & check-in</span><h3>Phố đi bộ Bùi Viện</h3><dl class="credit-meta"><div><dt>Tên ảnh</dt><dd>Bui Vien Street, Ho Chi Minh City, at night, 2023 (04).jpg</dd></div><div><dt>Tác giả</dt><dd><a href="https://commons.wikimedia.org/wiki/User:Bahnfrend" target="_blank" rel="noopener noreferrer">Bahnfrend</a></dd></div><div><dt>Nguồn</dt><dd>Wikimedia Commons</dd></div><div><dt>Giấy phép</dt><dd><a class="license-pill" href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a></dd></div></dl><div class="credit-links"><a class="source-link" href="https://commons.wikimedia.org/wiki/File:Bui_Vien_Street%2C_Ho_Chi_Minh_City%2C_at_night%2C_2023_%2804%29.jpg" target="_blank" rel="noopener noreferrer">Trang ảnh gốc</a></div></div>
+      </article>
+
+      <article class="credit-card">
+        <div class="credit-image-wrap"><img class="credit-image" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/2023-12-10%20Tao%20%C4%90%C3%A0n%20Park%2C%20Saigon%2001.jpg?width=600" alt="Công viên Tao Đàn" loading="lazy"><span class="credit-number">16</span><span class="status status-ok">Đã xác minh</span></div>
+        <div class="credit-body"><span class="credit-kind">Không gian xanh</span><h3>Công viên Tao Đàn</h3><dl class="credit-meta"><div><dt>Tên ảnh</dt><dd>2023-12-10 Tao Đàn Park, Saigon 01.jpg</dd></div><div><dt>Tác giả</dt><dd><a href="https://commons.wikimedia.org/wiki/User:%E6%BA%90%E7%BE%A9%E4%BF%A1" target="_blank" rel="noopener noreferrer">源義信</a></dd></div><div><dt>Nguồn</dt><dd>Wikimedia Commons</dd></div><div><dt>Giấy phép</dt><dd><a class="license-pill" href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">CC BY 4.0</a></dd></div></dl><div class="credit-links"><a class="source-link" href="https://commons.wikimedia.org/wiki/File:2023-12-10_Tao_%C4%90%C3%A0n_Park%2C_Saigon_01.jpg" target="_blank" rel="noopener noreferrer">Trang ảnh gốc</a></div></div>
+      </article>
+    </section>
+
+    <div class="section-heading">
+      <div><h2>Ảnh nền của phần mở đầu</h2><p>Hình toàn cảnh được dùng làm lớp nền phía sau các thẻ chuyển động.</p></div>
+      <span class="section-count">01 ẢNH NỀN</span>
+    </div>
+    <section class="credit-grid" aria-label="Ghi công ảnh nền hero">
+      <article class="credit-card">
+        <div class="credit-image-wrap"><img class="credit-image" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Ho%20Chi%20Minh%20City%20landscape%20form%20Bitexco%20Financial%20Tower.jpg?width=600" alt="Toàn cảnh trung tâm Sài Gòn nhìn từ Bitexco Skydeck" loading="lazy"><span class="credit-number">BG</span><span class="status status-ok">Đã xác minh</span></div>
+        <div class="credit-body"><span class="credit-kind">Ảnh nền hero</span><h3>Saigon Centre nhìn từ Bitexco Skydeck</h3><dl class="credit-meta"><div><dt>Tên ảnh</dt><dd>Ho Chi Minh City landscape form Bitexco Financial Tower.jpg</dd></div><div><dt>Tác giả</dt><dd><a href="https://www.flickr.com/people/princeroy/" target="_blank" rel="noopener noreferrer">Prince Roy</a></dd></div><div><dt>Nguồn</dt><dd>Ảnh gốc từ Flickr, lưu trữ trên Wikimedia Commons</dd></div><div><dt>Giấy phép</dt><dd><a class="license-pill" href="https://creativecommons.org/licenses/by/2.0/" target="_blank" rel="noopener noreferrer">CC BY 2.0</a></dd></div></dl><div class="credit-links"><a class="source-link" href="https://commons.wikimedia.org/wiki/File:Ho_Chi_Minh_City_landscape_form_Bitexco_Financial_Tower.jpg" target="_blank" rel="noopener noreferrer">Trang ảnh gốc</a></div></div>
+      </article>
+    </section>
+
+    <div class="method-note"><strong>Ghi chú quan trọng:</strong> CC0 là tuyên bố hiến tặng tác phẩm vào phạm vi công cộng nên không bắt buộc Ghi công theo điều khoản CC0, nhưng trang này vẫn ghi tên tác giả như một cách tôn trọng người sáng tạo. Với các giấy phép CC BY / CC BY-SA, hãy giữ liên kết tới nguồn và giấy phép; nếu sử dụng ảnh đã chỉnh sửa hoặc cắt ghép thành một tác phẩm mới, cần mô tả thay đổi phù hợp. Thông tin giấy phép trên trang nguồn có thể thay đổi, vì vậy hãy mở trang tệp gốc để kiểm tra lần cuối trước khi nộp.</div>
+
+    <section class="tools-section" aria-label="Ghi công các công cụ khác">
+      <div class="tool-card"><h3>Bản đồ nền</h3><p>Nếu trang chủ sử dụng Leaflet và OpenStreetMap, hãy giữ phần Ghi công trên bản đồ: “© OpenStreetMap contributors” cùng liên kết tới <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">điều khoản Ghi công của OpenStreetMap</a>. Leaflet là thư viện bản đồ mã nguồn mở; xem <a href="https://leafletjs.com/" target="_blank" rel="noopener noreferrer">trang chính thức của Leaflet</a>.</p></div>
+      <div class="tool-card"><h3>Thư viện giao diện</h3><p>Trang chủ đang sử dụng Bootstrap và các tệp giao diện trong project. Với trang Ghi công hình ảnh, các mục phía trên tập trung vào những ảnh minh họa được dùng trong hero và các thẻ địa điểm, thay vì coi nền tảng lưu trữ ảnh là tác giả.</p></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2026 · Cẩm Nang Số Quận 1</p>
+      <p>Ghi công rõ ràng là một phần của hành trình khám phá.</p>
+      <a href="index.html">← Trở lại trang chủ</a>
+    </div>
+  </footer>
+</body>
+</html>
