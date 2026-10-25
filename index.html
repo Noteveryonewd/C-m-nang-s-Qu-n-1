@@ -3,213 +3,111 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
   <title>Cẩm Nang Số Quận 1 — Khám phá Sài Gòn</title>
-
-  <meta
-    name="description"
-    content="Khám phá các điểm đến lịch sử, kiến trúc, văn hóa và giải trí tại khu vực Quận 1 lịch sử của Thành phố Hồ Chí Minh."
-  >
+  <meta name="description" content="Khám phá các điểm đến lịch sử, kiến trúc, văn hóa và giải trí tại khu vực Quận 1 trung tâm Thành phố Hồ Chí Minh.">
   <meta name="theme-color" content="#143823">
 
-  <!-- Existing site styles -->
+  <!-- Core styles -->
   <link rel="stylesheet" href="assets/vendor/bootstrap6/css/bootstrap.min.css">
   <link rel="stylesheet" href="assets/css/base.css">
   <link rel="stylesheet" href="assets/css/style.css">
 
-  <!-- Hero and homepage styles -->
+  <!-- Hero animation & homepage layout -->
   <link rel="stylesheet" href="assets/css/hero-morph.css">
   <link rel="stylesheet" href="assets/css/district1-home.css">
 
   <!-- Leaflet map styles -->
-  <link
-    rel="stylesheet"
-    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
-    crossorigin=""
-  >
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
 </head>
-
 <body id="top" class="q1-home">
 
-  <a class="q1-skip-link" href="#q1-main">
-    Bỏ qua điều hướng
-  </a>
+  <a class="q1-skip-link" href="#q1-main">Bỏ qua điều hướng chính</a>
 
-  <!-- =========================================
-       HEADER
-  ========================================== -->
   <header class="q1-header">
     <div class="q1-container q1-header-inner">
-
-      <a
-        class="q1-brand"
-        href="#top"
-        aria-label="Cẩm nang số Quận 1 - về đầu trang"
-      >
+      <a class="q1-brand" href="#top" aria-label="Cẩm nang số Quận 1 - về đầu trang">
         <span class="q1-brand-mark">Q1</span>
-
         <span class="q1-brand-copy">
-          <strong>Quận 1 Sài Gòn</strong>
+          <strong>Cẩm Nang Số Về Quận 1 - Nhóm 4</strong>
           <small>Cẩm nang khám phá đô thị</small>
         </span>
       </a>
 
-      <nav class="q1-nav" aria-label="Điều hướng chính">
+     <nav class="q1-nav" aria-label="Điều hướng trang">
         <a href="#places">Điểm đến</a>
         <a href="#district-map">Bản đồ</a>
         <a href="#guides">Gợi ý hành trình</a>
+        <a href="credits.html" style="color: var(--q1-gold, #d4af37); font-weight: 800;">Tri ân tác giả</a>
       </nav>
 
       <a class="q1-header-cta" href="#places">
         Khám phá ngay <span aria-hidden="true">↗</span>
       </a>
-
     </div>
   </header>
 
   <main id="q1-main">
+    <!-- Hero / Morphing Cards Section -->
+    <section id="govnHeroMorph" class="hm-hero-scope" aria-label="Khám phá các biểu tượng kiến trúc nổi bật tại Quận 1">
+      <div class="hm-bg" aria-hidden="true" style="background-image: url('https://commons.wikimedia.org/wiki/Special:Redirect/file/Ho%20Chi%20Minh%20City%20landscape%20form%20Bitexco%20Financial%20Tower.jpg?width=1600');"></div>
 
-    <!-- =========================================
-         HERO / MORPHING LOCATION CARDS
-         Keep the existing animation IDs unchanged.
-    ========================================== -->
-    <section
-      id="govnHeroMorph"
-      class="hm-hero-scope"
-      aria-label="Khám phá các địa điểm nổi bật tại Quận 1"
-    >
-
-      <!-- Background image -->
-      <div
-        class="hm-bg"
-        aria-hidden="true"
-        style="background-image: url('https://commons.wikimedia.org/wiki/Special:Redirect/file/Ho%20Chi%20Minh%20City%20landscape%20form%20Bitexco%20Financial%20Tower.jpg?width=1600');"
-      ></div>
-
-      <!-- District title -->
-      <div
-        class="hm-district-title"
-        aria-label="Quận 1, Thành phố Hồ Chí Minh"
-      >
-        <span class="hm-district-title-kicker">
-          THÀNH PHỐ HỒ CHÍ MINH
-        </span>
-
-        <span class="hm-district-title-name">
-          Quận 1
-        </span>
+      <div class="hm-district-title" aria-label="Quận 1, Thành phố Hồ Chí Minh">
+        <span class="hm-district-title-kicker">THÀNH PHỐ HỒ CHÍ MINH</span>
+        <span class="hm-district-title-name">Quận 1</span>
       </div>
 
-      <!-- Intro panel: intentionally appears only once -->
       <div class="hm-intro">
-
         <div class="hm-intro-panel">
-
           <div class="hm-intro-meta">
             <span class="hm-intro-kicker">
               <span class="hm-intro-dot"></span>
               CẨM NANG KHÁM PHÁ
             </span>
-
-            <span class="hm-intro-location">
-              TP. HỒ CHÍ MINH · Q1
-            </span>
+            <span class="hm-intro-location">TP. HỒ CHÍ MINH · Q1</span>
           </div>
-
           <h2>
             <span class="hm-title-small">Trái tim</span>
-
-            <span class="hm-title-large">
-              Sài Gòn<span class="hm-title-dot">.</span>
-            </span>
+            <span class="hm-title-large">Sài Gòn<span class="hm-title-dot">.</span></span>
           </h2>
-
-          <p>
-            Đi qua những dấu ấn lịch sử, chiêm ngưỡng kiến trúc
-            và cảm nhận nhịp sống của thành phố.
-          </p>
-
+          <p>Đi qua những dấu ấn lịch sử thăng trầm, chiêm ngưỡng các công trình kiến trúc di sản và chạm vào nhịp sống đương đại đầy cuốn hút của thành phố.</p>
           <div class="hm-intro-footer">
             <span class="hm-intro-rule"></span>
             <span>DI SẢN · KIẾN TRÚC · NHỊP SỐNG</span>
             <span class="hm-intro-rule"></span>
           </div>
-
         </div>
       </div>
 
-      <!-- Label shown during the morphing animation -->
       <div class="hm-arc-content" aria-hidden="true">
         <p>BỘ SƯU TẬP ĐIỂM ĐẾN TIÊU BIỂU</p>
       </div>
 
-      <!-- JavaScript renders the animated location cards here -->
-      <div
-        id="heroCardsContainer"
-        class="hm-cards"
-        aria-live="off"
-      ></div>
-
+      <div id="heroCardsContainer" class="hm-cards" aria-live="off"></div>
     </section>
 
-
-    <!-- =========================================
-         DESTINATIONS / SEARCH
-    ========================================== -->
-    <section
-      class="q1-section q1-places-section"
-      id="places"
-    >
+    <!-- Destinations & Search Section -->
+    <section class="q1-section q1-places-section" id="places">
       <div class="q1-container">
-
         <div class="q1-section-heading q1-section-heading-row">
-
           <div>
-            <p class="q1-eyebrow">LÊN KẾ HOẠCH KHÁM PHÁ</p>
-
+            <p class="q1-eyebrow">LÊN KẾ HOẠCH HÀNH TRÌNH</p>
             <h2>Điểm đến nổi bật</h2>
-
-            <p class="q1-section-lede">
-              Từ công trình kiến trúc lâu đời đến những góc phố
-              sôi động — tìm nơi bạn muốn bắt đầu.
-            </p>
+            <p class="q1-section-lede">Từ các công trình kiến trúc Pháp cổ kính đến những góc phố tấp nập — hãy chọn nơi bạn muốn bắt đầu câu chuyện của mình.</p>
           </div>
-
-          <span class="q1-section-index" aria-hidden="true">
-            01 / KHÁM PHÁ
-          </span>
-
+          <span class="q1-section-index" aria-hidden="true">01 / KHÁM PHÁ</span>
         </div>
 
-        <!-- Search form -->
-        <form
-          id="q1-search-form"
-          class="q1-search-bar"
-          role="search"
-        >
-
+        <form id="q1-search-form" class="q1-search-bar" role="search">
           <label class="q1-search-field">
             <span class="q1-field-label">Tìm địa điểm</span>
-
             <span class="q1-input-wrap">
-              <span
-                aria-hidden="true"
-                class="q1-search-icon"
-              ></span>
-
-              <input
-                id="q1-search-input"
-                type="search"
-                placeholder="Ví dụ: Dinh Độc Lập, bảo tàng, kiến trúc…"
-                autocomplete="off"
-              >
+              <span aria-hidden="true" class="q1-search-icon"></span>
+              <input id="q1-search-input" type="search" placeholder="Ví dụ: Dinh Độc Lập, bảo tàng, kiến trúc..." autocomplete="off">
             </span>
           </label>
 
           <label class="q1-search-field q1-category-field">
             <span class="q1-field-label">Nhóm địa điểm</span>
-
             <select id="q1-category-select">
               <option value="all">Tất cả nhóm</option>
               <option value="historical">Di tích lịch sử</option>
@@ -220,371 +118,280 @@
             </select>
           </label>
 
-          <button
-            class="q1-search-button"
-            type="submit"
-          >
+          <button class="q1-search-button" type="submit">
             Tìm kiếm <span aria-hidden="true">→</span>
           </button>
-
         </form>
 
-        <!-- Search results status -->
         <div class="q1-results-line">
-          <p id="q1-results-count" aria-live="polite">
-            Đang tải điểm đến…
-          </p>
-
-          <button
-            id="q1-clear-search"
-            class="q1-clear-button"
-            type="button"
-          >
-            Xóa tìm kiếm
-          </button>
+          <p id="q1-results-count" aria-live="polite">Đang tải danh sách điểm đến...</p>
+          <button id="q1-clear-search" class="q1-clear-button" type="button">Xóa tìm kiếm</button>
         </div>
 
-        <!-- JavaScript renders destination listings here -->
-        <div
-          id="q1-listings-grid"
-          class="q1-listings-grid"
-          aria-live="polite"
-        ></div>
+        <div id="q1-listings-grid" class="q1-listings-grid" aria-live="polite"></div>
 
-        <p
-          id="q1-no-results"
-          class="q1-no-results"
-          hidden
-        >
-          Không tìm thấy địa điểm phù hợp. Hãy thử từ khóa hoặc nhóm khác.
-        </p>
-
+        <p id="q1-no-results" class="q1-no-results" hidden>Không tìm thấy địa điểm phù hợp với từ khóa của bạn. Hãy thử đổi từ khóa hoặc danh mục khác nhé.</p>
       </div>
     </section>
 
-
-    <!-- =========================================
-         INTERACTIVE MAP
-    ========================================== -->
-    <section
-      class="q1-section q1-map-section"
-      id="district-map"
-    >
+    <!-- Interactive Map Section -->
+    <section class="q1-section q1-map-section" id="district-map">
       <div class="q1-container">
-
         <div class="q1-section-heading q1-section-heading-row">
-
           <div>
             <p class="q1-eyebrow">ĐỊNH VỊ &amp; LÊN ĐƯỜNG</p>
-
-            <h2>Các điểm đến trên bản đồ</h2>
-
-            <p class="q1-section-lede">
-              Chọn một ghim để xem thông tin địa điểm hoặc mở chỉ đường
-              trên Google Maps.
-            </p>
+            <h2>Bản đồ điểm đến Quận 1</h2>
+            <p class="q1-section-lede">Chọn một ghim trên bản đồ để xem tóm tắt thông tin nhanh hoặc mở chỉ đường chi tiết trên Google Maps.</p>
           </div>
-
-          <span class="q1-section-index" aria-hidden="true">
-            02 / BẢN ĐỒ
-          </span>
-
+          <span class="q1-section-index" aria-hidden="true">02 / BẢN ĐỒ</span>
         </div>
 
         <div class="q1-map-layout">
-
-          <!-- Map introduction -->
           <div class="q1-map-note">
-
-            <span class="q1-map-note-mark" aria-hidden="true">
-              ⌖
-            </span>
-
-            <h3>Khám phá theo vị trí</h3>
-
-            <p>
-              Bản đồ giúp bạn hình dung khoảng cách giữa các điểm tham quan
-              và chọn một khu vực để khám phá.
-            </p>
-
-            <p class="q1-map-disclaimer">
-              Ghim bản đồ là vị trí tham khảo; hãy kiểm tra địa chỉ trước khi đi.
-            </p>
-
+            <span class="q1-map-note-mark" aria-hidden="true">⌖</span>
+            <h3>Định hướng không gian</h3>
+            <p>Bản đồ trực quan giúp bạn hình dung khoảng cách thực tế giữa các điểm tham quan, thuận tiện kết hợp lịch trình trong một buổi.</p>
+            <p class="q1-map-disclaimer">Vị trí ghim trên bản đồ mang tính tham khảo tương đối; hãy kiểm tra kỹ địa chỉ cụ thể trước khi di chuyển.</p>
             <div class="q1-map-legend">
               <span class="q1-map-dot"></span>
-              Điểm đến trong cẩm nang
+              Địa điểm trong cẩm nang số
             </div>
-
           </div>
 
-          <!-- Leaflet map container -->
           <div class="q1-map-frame">
-
-            <div
-              id="q1-leaflet-map"
-              class="q1-leaflet-map"
-              role="application"
-              aria-label="Bản đồ tương tác các điểm đến tại Quận 1"
-            ></div>
-
-            <div
-              id="q1-map-status"
-              class="q1-map-status"
-              role="status"
-            >
-              Đang tải bản đồ…
-            </div>
-
+            <div id="q1-leaflet-map" class="q1-leaflet-map" role="application" aria-label="Bản đồ tương tác các điểm đến tại Quận 1"></div>
+            <div id="q1-map-status" class="q1-map-status" role="status">Đang tải bản đồ tương tác...</div>
           </div>
-
         </div>
 
-        <p class="q1-map-attribution-note">
-          Bản đồ sử dụng Leaflet và dữ liệu nền OpenStreetMap;
-          cần kết nối Internet để tải bản đồ.
-          © OpenStreetMap contributors.
-        </p>
-
+        <p class="q1-map-attribution-note">Bản đồ vận hành trên nền tảng Leaflet và dữ liệu nguồn mở OpenStreetMap. © OpenStreetMap contributors.</p>
       </div>
     </section>
 
-
-    <!-- =========================================
-         SUGGESTED ITINERARIES
-    ========================================== -->
-    <section
-      class="q1-section q1-guides-section"
-      id="guides"
-    >
+    <!-- Suggested Itineraries Section -->
+    <section class="q1-section q1-guides-section" id="guides">
       <div class="q1-container">
-
         <div class="q1-section-heading q1-section-heading-row">
-
           <div>
             <p class="q1-eyebrow">GỢI Ý HÀNH TRÌNH</p>
-
-            <h2>Bắt đầu từ đâu?</h2>
-
-            <p class="q1-section-lede">
-              Một vài chủ đề để bạn dễ chọn hướng khám phá Sài Gòn.
-            </p>
+            <h2>Bạn muốn bắt đầu từ đâu?</h2>
+            <p class="q1-section-lede">Lựa chọn chủ đề phù hợp với sở thích để dễ dàng khám phá trọn vẹn tinh thần Sài Gòn.</p>
           </div>
-
-          <span class="q1-section-index" aria-hidden="true">
-            03 / GỢI Ý
-          </span>
-
+          <span class="q1-section-index" aria-hidden="true">03 / GỢI Ý</span>
         </div>
 
         <div class="q1-guides-grid">
-
-          <!-- Architecture guide -->
-          <a
-            class="q1-guide-card"
-            href="#places"
-            data-guide-category="architecture"
-          >
+          <a class="q1-guide-card" href="#places" data-guide-category="architecture">
             <div class="q1-guide-art q1-guide-art-architecture">
               <span>01</span>
               <span class="q1-guide-symbol" aria-hidden="true">⌂</span>
             </div>
-
             <div class="q1-guide-body">
               <span class="q1-guide-tag">KIẾN TRÚC</span>
-
-              <h3>Dấu ấn kiến trúc Sài Gòn</h3>
-
-              <p>
-                Khám phá các công trình mang dấu ấn lịch sử
-                và diện mạo thành phố.
-              </p>
-
-              <span class="q1-guide-link">
-                Xem điểm đến <b aria-hidden="true">→</b>
-              </span>
+              <h3>Dấu ấn kiến trúc Sài Gòn xưa</h3>
+              <p>Chiêm ngưỡng những công trình phong cách Pháp trường tồn cùng năm tháng giữa lòng đô thị hiện đại.</p>
+              <span class="q1-guide-link">Khám phá ngay <b aria-hidden="true">→</b></span>
             </div>
           </a>
 
-
-          <!-- History guide -->
-          <a
-            class="q1-guide-card"
-            href="#places"
-            data-guide-category="historical"
-          >
+          <a class="q1-guide-card" href="#places" data-guide-category="historical">
             <div class="q1-guide-art q1-guide-art-history">
               <span>02</span>
               <span class="q1-guide-symbol" aria-hidden="true">◷</span>
             </div>
-
             <div class="q1-guide-body">
               <span class="q1-guide-tag">LỊCH SỬ</span>
-
-              <h3>Những câu chuyện của thành phố</h3>
-
-              <p>
-                Đi qua các địa điểm gắn với những giai đoạn
-                quan trọng của Sài Gòn.
-              </p>
-
-              <span class="q1-guide-link">
-                Xem điểm đến <b aria-hidden="true">→</b>
-              </span>
+              <h3>Những dòng chảy ký ức đô thị</h3>
+              <p>Lần giở lại từng trang sử hào hùng qua các di tích và bảo tàng lưu giữ trọn vẹn hồn cốt thời gian.</p>
+              <span class="q1-guide-link">Khám phá ngay <b aria-hidden="true">→</b></span>
             </div>
           </a>
 
-
-          <!-- City life guide -->
-          <a
-            class="q1-guide-card"
-            href="#places"
-            data-guide-category="entertainment"
-          >
+          <a class="q1-guide-card" href="#places" data-guide-category="entertainment">
             <div class="q1-guide-art q1-guide-art-city">
               <span>03</span>
               <span class="q1-guide-symbol" aria-hidden="true">✳</span>
             </div>
-
             <div class="q1-guide-body">
               <span class="q1-guide-tag">NHỊP SỐNG</span>
-
-              <h3>Phố xá từ chiều đến tối</h3>
-
-              <p>
-                Tìm những nơi dạo bộ, ngắm sông và cảm nhận
-                nhịp sống đô thị.
-              </p>
-
-              <span class="q1-guide-link">
-                Xem điểm đến <b aria-hidden="true">→</b>
-              </span>
+              <h3>Phố xá từ hoàng hôn đến đêm</h3>
+              <p>Hòa mình vào nhịp sống tấp nập tại các phố đi bộ, tổ hợp chung cư cũ và góc phố không ngủ.</p>
+              <span class="q1-guide-link">Khám phá ngay <b aria-hidden="true">→</b></span>
             </div>
           </a>
-
         </div>
       </div>
     </section>
-
   </main>
 
-
-  <!-- =========================================
-       FOOTER
-  ========================================== -->
   <footer class="q1-footer">
     <div class="q1-container q1-footer-inner">
-
-      <a
-        class="q1-brand q1-footer-brand"
-        href="#top"
-      >
+      <a class="q1-brand q1-footer-brand" href="#top">
         <span class="q1-brand-mark">Q1</span>
-
         <span class="q1-brand-copy">
           <strong>Cẩm Nang Số Quận 1</strong>
-          <small>Khám phá Sài Gòn bằng góc nhìn của bạn</small>
+          <small>Trải nghiệm Sài Gòn theo cách riêng của bạn</small>
         </span>
       </a>
 
-      <p>
-        Thông tin tham khảo cho hành trình khám phá khu vực
-        Quận 1 lịch sử, TP. Hồ Chí Minh.
-      </p>
+      <p>Nền tảng thông tin tham khảo phục vụ hành trình tìm hiểu và khám phá khu vực trung tâm lịch sử Quận 1, Thành phố Hồ Chí Minh.</p>
 
-      <a
-  class="q1-credits-icon"
-  href="credits.html"
-  aria-label="Nguồn ảnh và ghi công"
-  title="Nguồn ảnh & ghi công"
->
-  <svg
-    viewBox="0 0 24 24"
-    width="22"
-    height="22"
-    fill="none"
-    stroke="currentColor"
-    stroke-width="1.7"
-    stroke-linecap="round"
-    stroke-linejoin="round"
-    aria-hidden="true"
-  >
-    <!-- Author silhouette -->
-    <circle cx="9" cy="7.5" r="3"></circle>
-    <path d="M3.5 19c.4-3.5 2.3-5.5 5.5-5.5 2.3 0 3.8 1 4.7 2.7"></path>
-
-    <!-- Pencil -->
-    <path d="m15 14.5 5-5 2 2-5 5-3 .8z"></path>
-    <path d="m18.8 10.7 2 2"></path>
-  </svg>
-</a>
-
-      <a href="#top" class="q1-back-top">
-        Về đầu trang ↑
+      <a class="q1-credits-icon" href="credits.html" aria-label="Nguồn ảnh và ghi công" title="Nguồn ảnh &amp; ghi công">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="9" cy="7.5" r="3"></circle>
+          <path d="M3.5 19c.4-3.5 2.3-5.5 5.5-5.5 2.3 0 3.8 1 4.7 2.7"></path>
+          <path d="m15 14.5 5-5 2 2-5 5-3 .8z"></path>
+          <path d="m18.8 10.7 2 2"></path>
+        </svg>
       </a>
 
+      <a href="#top" class="q1-back-top">Về đầu trang ↑</a>
     </div>
-  </footer>
+    <!-- Team Tribute & Tech Stack Section -->
+<section class="q1-section q1-tribute-section" id="tribute">
+  <div class="q1-container">
+    <div class="q1-section-heading q1-section-heading-row">
+      <div>
+        <p class="q1-eyebrow">ĐỘI NGŨ PHÁT TRIỂN &amp; CÔNG NGHỆ</p>
+        <h2>Tri Ân Thành Viên &amp; Công Cụ</h2>
+        <p class="q1-section-lede">Sản phẩm cẩm nang số Quận 1 được thực hiện bởi nhiệt huyết của các thành viên cùng sự hỗ trợ từ các công cụ công nghệ hiện đại.</p>
+      </div>
+      <span class="q1-section-index" aria-hidden="true">04 / ĐỘI NGŨ</span>
+    </div>
 
-
-  <!-- =========================================
-       LOCATION DETAIL DRAWER
-       Required by hero-morph.js
-  ========================================== -->
-  <div
-    id="hmDetailDrawer"
-    class="hm-drawer"
-    aria-hidden="true"
-  >
-
-    <div
-      class="hm-drawer-backdrop"
-      data-hm-close
-    ></div>
-
-    <aside
-      class="hm-drawer-panel"
-      role="dialog"
-      aria-modal="true"
-      aria-labelledby="hmDrawerTitle"
-      tabindex="-1"
-    >
-
-      <!-- Drawer image and heading -->
-      <div class="hm-drawer-hero">
-
-        <img
-          id="hmDrawerImg"
-          src=""
-          alt=""
-        >
-
-        <div class="hm-drawer-image-shade"></div>
-
-        <button
-          class="hm-drawer-close"
-          type="button"
-          aria-label="Đóng thông tin địa điểm"
-          data-hm-close
-        >
-          ×
-        </button>
-
-        <div class="hm-drawer-heading">
-          <span
-            id="hmDrawerCategory"
-            class="hm-drawer-category"
-          ></span>
-
-          <h2 id="hmDrawerTitle"></h2>
+    <!-- Team Members Grid -->
+    <div class="q1-team-grid">
+      <!-- Web Developers -->
+      <div class="q1-team-card">
+        <div class="q1-team-role-tag">
+          <span class="q1-role-icon">⚡</span>
+          <span>XÂY DỰNG WEBSITE</span>
         </div>
-
+        <h3 class="q1-team-role-title">Lập Trình &amp; Giao Diện</h3>
+        <ul class="q1-member-list">
+          <li>
+            <div class="q1-avatar">ND</div>
+            <div class="q1-member-info">
+              <strong>Lê Nhật Di</strong>
+              <small>Web Developer / Frontend</small>
+            </div>
+          </li>
+          <li>
+            <div class="q1-avatar">AK</div>
+            <div class="q1-member-info">
+              <strong>Ngô Hà Anh Khoa</strong>
+              <small>Web Developer / UI &amp; UX</small>
+            </div>
+          </li>
+        </ul>
       </div>
 
+      <!-- Information Researchers -->
+      <div class="q1-team-card">
+        <div class="q1-team-role-tag">
+          <span class="q1-role-icon">🔍</span>
+          <span>TÌM KIẾM THÔNG TIN</span>
+        </div>
+        <h3 class="q1-team-role-title">Nội Dung &amp; Tư Liệu</h3>
+        <ul class="q1-member-list">
+          <li>
+            <div class="q1-avatar">MK</div>
+            <div class="q1-member-info">
+              <strong>Cao Minh Khôi</strong>
+              <small>Content Researcher</small>
+            </div>
+          </li>
+          <li>
+            <div class="q1-avatar">TD</div>
+            <div class="q1-member-info">
+              <strong>Nguyễn Hoàng Tùng Dương</strong>
+              <small>Content Researcher</small>
+            </div>
+          </li>
+        </ul>
+      </div>
 
-      <!-- Drawer information -->
+      <!-- Image Researchers -->
+      <div class="q1-team-card">
+        <div class="q1-team-role-tag">
+          <span class="q1-role-icon">🎨</span>
+          <span>TÌM KIẾM HÌNH ẢNH</span>
+        </div>
+        <h3 class="q1-team-role-title">Hình Ảnh &amp; Truyền Thông</h3>
+        <ul class="q1-member-list">
+          <li>
+            <div class="q1-avatar">DD</div>
+            <div class="q1-member-info">
+              <strong>Nguyễn Đăng Duy</strong>
+              <small>Visual &amp; Asset Curator</small>
+            </div>
+          </li>
+          <li>
+            <div class="q1-avatar">NK</div>
+            <div class="q1-member-info">
+              <strong>Nguyễn Trần Nhật Khang</strong>
+              <small>Visual &amp; Asset Curator</small>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Tech Stack & AI Tools Showcase -->
+    <div class="q1-tech-showcase">
+      <div class="q1-tech-header">
+        <h3>Công Cụ &amp; Phần Mềm Hỗ Trợ</h3>
+        <p>Hệ sinh thái công nghệ AI và nền tảng lập trình đồng hành trong quá trình xây dựng dự án</p>
+      </div>
+
+      <div class="q1-tech-badges">
+        <div class="q1-tech-pill">
+          <span class="q1-tech-icon">🤖</span>
+          <span>ChatGPT</span>
+        </div>
+        <div class="q1-tech-pill">
+          <span class="q1-tech-icon">✨</span>
+          <span>Gemini</span>
+        </div>
+        <div class="q1-tech-pill">
+          <span class="q1-tech-icon">🚀</span>
+          <span>Copilot</span>
+        </div>
+        <div class="q1-tech-pill">
+          <span class="q1-tech-icon">💻</span>
+          <span>Replit</span>
+        </div>
+        <div class="q1-tech-pill">
+          <span class="q1-tech-icon">📝</span>
+          <span>Visual Studio Code</span>
+        </div>
+        <div class="q1-tech-pill">
+          <span class="q1-tech-icon">🐙</span>
+          <span>GitHub</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+  </footer>
+
+  <!-- Location Detail Drawer Modal -->
+  <div id="hmDrawerDrawer" class="hm-drawer" aria-hidden="true" style="display:none"></div>
+  <div id="hmDetailDrawer" class="hm-drawer" aria-hidden="true">
+    <div class="hm-drawer-backdrop" data-hm-close></div>
+    <aside class="hm-drawer-panel" role="dialog" aria-modal="true" aria-labelledby="hmDrawerTitle" tabindex="-1">
+      <div class="hm-drawer-hero">
+        <img id="hmDrawerImg" src="" alt="">
+        <div class="hm-drawer-image-shade"></div>
+        <button class="hm-drawer-close" type="button" aria-label="Đóng cửa sổ thông tin" data-hm-close>×</button>
+        <div class="hm-drawer-heading">
+          <span id="hmDrawerCategory" class="hm-drawer-category"></span>
+          <h2 id="hmDrawerTitle"></h2>
+        </div>
+      </div>
+
       <div class="hm-drawer-body">
-
         <div class="hm-drawer-address">
           <span aria-hidden="true">⌖</span>
           <span id="hmDrawerAddress"></span>
@@ -596,90 +403,56 @@
         </section>
 
         <section class="hm-detail-section hm-detail-story">
-          <h3>CÂU CHUYỆN &amp; ĐIỂM ĐẶC TRƯNG</h3>
+          <h3>CÂU CHUYỆN &amp; ĐIỂM NHẤN</h3>
           <p id="hmDrawerStory"></p>
         </section>
 
         <div class="hm-detail-columns">
-
           <section class="hm-detail-section hm-detail-highlights">
-            <h3>ĐỪNG BỎ LỠ</h3>
-
-            <ul
-              id="hmDrawerHighlights"
-              class="hm-highlight-list"
-            ></ul>
+            <h3>TRẢI NGHIỆM ĐÁNG CHÚ Ý</h3>
+            <ul id="hmDrawerHighlights" class="hm-highlight-list"></ul>
           </section>
 
           <section class="hm-detail-section hm-detail-tips">
-            <h3>GỢI Ý KHI GHÉ THĂM</h3>
+            <h3>LƯU Ý KHI THAM QUAN</h3>
             <p id="hmDrawerTips"></p>
           </section>
-
         </div>
 
         <div class="hm-visit-planning">
-
           <div>
             <span>THỜI GIAN GỢI Ý</span>
             <p id="hmDrawerVisitTime"></p>
           </div>
-
           <div>
-            <span>THỜI ĐIỂM PHÙ HỢP</span>
+            <span>THỜI ĐIỂM LÝ TƯỞNG</span>
             <p id="hmDrawerBestTime"></p>
           </div>
-
         </div>
 
         <div class="hm-facts">
-
           <div>
             <span>GIỜ MỞ CỬA (THAM KHẢO)</span>
             <p id="hmDrawerHours"></p>
           </div>
-
           <div>
             <span>VÉ / CHI PHÍ (THAM KHẢO)</span>
             <p id="hmDrawerTicket"></p>
           </div>
-
         </div>
 
-        <p class="hm-detail-disclaimer">
-          Giờ mở cửa, vé và điều kiện tham quan có thể thay đổi.
-          Hãy xác nhận thông tin với đơn vị quản lý trước khi đi.
-        </p>
+        <p class="hm-detail-disclaimer">Giờ mở cửa, chi phí vé và quy định đón khách có thể thay đổi tùy thời điểm. Quý khách vui lòng kiểm tra trực tiếp với đơn vị quản lý trước khi lên lịch trình.</p>
 
-        <a
-          id="hmDrawerMapsLink"
-          class="hm-maps-link"
-          href="#"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          ↗ Mở Google Maps
+        <a id="hmDrawerMapsLink" class="hm-maps-link" href="#" target="_blank" rel="noopener noreferrer">
+          ↗ Mở chỉ đường trên Google Maps
         </a>
-
       </div>
     </aside>
   </div>
 
-
-  <!-- =========================================
-       SCRIPTS
-       Load Leaflet first.
-       Defer the hero and homepage scripts in order.
-  ========================================== -->
-
-  <script
-    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
-    crossorigin=""
-  ></script>
-
+  <!-- JavaScript bundles -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
   <script src="assets/js/hero-morph.js" defer></script>
   <script src="assets/js/district1-home.js" defer></script>
-
 </body>
 </html>
