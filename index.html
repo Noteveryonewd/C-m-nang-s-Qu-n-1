@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Cẩm Nang Số Quận 1 — Khám phá Sài Gòn</title>
-  <meta name="description" content="Khám phá các điểm đến lịch sử, kiến trúc, văn hóa và giải trí tại khu vực Quận 1 trung tâm Thành phố Hồ Chí Minh.">
+  <meta name="description" content="Khám phá các điểm đến lịch sử, kiến trúc, văn hóa, cà phê và giải trí tại khu vực Quận 1 trung tâm Thành phố Hồ Chí Minh.">
   <meta name="theme-color" content="#143823">
 
   <!-- Core styles -->
@@ -15,9 +15,6 @@
   <!-- Hero animation & homepage layout -->
   <link rel="stylesheet" href="assets/css/hero-morph.css">
   <link rel="stylesheet" href="assets/css/district1-home.css">
-
-  <!-- Leaflet map styles -->
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
 </head>
 <body id="top" class="q1-home">
 
@@ -33,9 +30,9 @@
         </span>
       </a>
 
-     <nav class="q1-nav" aria-label="Điều hướng trang">
+      <nav class="q1-nav" aria-label="Điều hướng trang">
         <a href="#places">Điểm đến</a>
-        <a href="#district-map">Bản đồ</a>
+        <a href="#cafes">Cà phê &amp; Chill</a>
         <a href="#guides">Gợi ý hành trình</a>
         <a href="credits.html" style="color: var(--q1-gold, #d4af37); font-weight: 800;">Tri ân tác giả</a>
       </nav>
@@ -134,37 +131,42 @@
       </div>
     </section>
 
-    <!-- Interactive Map Section -->
-    <section class="q1-section q1-map-section" id="district-map">
+    <!-- Scrollable 50-Spot Café & Nightlife Directory Section -->
+    <section class="q1-section q1-cafes-section" id="cafes">
       <div class="q1-container">
         <div class="q1-section-heading q1-section-heading-row">
           <div>
-            <p class="q1-eyebrow">ĐỊNH VỊ &amp; LÊN ĐƯỜNG</p>
-            <h2>Bản đồ điểm đến Quận 1</h2>
-            <p class="q1-section-lede">Chọn một ghim trên bản đồ để xem tóm tắt thông tin nhanh hoặc mở chỉ đường chi tiết trên Google Maps.</p>
+            <p class="q1-eyebrow">THỔ ĐỊA QUẬN 1 · 50 TỌA ĐỘ CHỌN LỌC</p>
+            <h2>Cà phê, Rooftop &amp; Góc Chill</h2>
+            <p class="q1-section-lede">Danh sách cuộn nhanh 50 quán cà phê đặc sản, chung cư cổ, hidden bar và rooftop ngắm cảnh đêm đẹp nhất trung tâm Sài Gòn.</p>
           </div>
-          <span class="q1-section-index" aria-hidden="true">02 / BẢN ĐỒ</span>
+          <span class="q1-section-index" aria-hidden="true">02 / CÀ PHÊ &amp; CHILL</span>
         </div>
 
-        <div class="q1-map-layout">
-          <div class="q1-map-note">
-            <span class="q1-map-note-mark" aria-hidden="true">⌖</span>
-            <h3>Định hướng không gian</h3>
-            <p>Bản đồ trực quan giúp bạn hình dung khoảng cách thực tế giữa các điểm tham quan, thuận tiện kết hợp lịch trình trong một buổi.</p>
-            <p class="q1-map-disclaimer">Vị trí ghim trên bản đồ mang tính tham khảo tương đối; hãy kiểm tra kỹ địa chỉ cụ thể trước khi di chuyển.</p>
-            <div class="q1-map-legend">
-              <span class="q1-map-dot"></span>
-              Địa điểm trong cẩm nang số
-            </div>
+        <div class="q1-dir-controls">
+          <div class="q1-dir-pills" role="tablist" aria-label="Lọc theo phong cách quán">
+            <button type="button" class="q1-dir-pill is-active" data-cafe-cat="all">Tất cả (50)</button>
+            <button type="button" class="q1-dir-pill" data-cafe-cat="rooftop">🍸 Rooftop / Đêm</button>
+            <button type="button" class="q1-dir-pill" data-cafe-cat="specialty">☕ Cà phê đặc sản</button>
+            <button type="button" class="q1-dir-pill" data-cafe-cat="heritage">🏛️ Chung cư &amp; Hoài cổ</button>
+            <button type="button" class="q1-dir-pill" data-cafe-cat="hidden">🌿 Sân vườn &amp; Góc yên</button>
+            <button type="button" class="q1-dir-pill" data-cafe-cat="saved">♥ Đã lưu</button>
           </div>
 
-          <div class="q1-map-frame">
-            <div id="q1-leaflet-map" class="q1-leaflet-map" role="application" aria-label="Bản đồ tương tác các điểm đến tại Quận 1"></div>
-            <div id="q1-map-status" class="q1-map-status" role="status">Đang tải bản đồ tương tác...</div>
+          <div class="q1-dir-search-wrap">
+            <span aria-hidden="true" class="q1-search-icon"></span>
+            <input id="q1-cafe-search" type="search" placeholder="Tìm tên quán, đường, món đặc trưng..." autocomplete="off">
           </div>
         </div>
 
-        <p class="q1-map-attribution-note">Bản đồ vận hành trên nền tảng Leaflet và dữ liệu nguồn mở OpenStreetMap. © OpenStreetMap contributors.</p>
+        <div class="q1-dir-shell">
+          <div class="q1-dir-topbar">
+            <p id="q1-cafe-count" class="q1-dir-count" aria-live="polite">Đang hiển thị 50 / 50 địa điểm</p>
+            <button id="q1-cafe-reset" type="button" class="q1-dir-reset">Đặt lại bộ lọc</button>
+          </div>
+
+          <div id="q1-cafe-scroll-list" class="q1-dir-scroll-area" role="region" aria-label="Danh sách cuộn 50 địa điểm cà phê và giải trí Quận 1"></div>
+        </div>
       </div>
     </section>
 
@@ -247,137 +249,113 @@
 
       <a href="#top" class="q1-back-top">Về đầu trang ↑</a>
     </div>
+
     <!-- Team Tribute & Tech Stack Section -->
-<section class="q1-section q1-tribute-section" id="tribute">
-  <div class="q1-container">
-    <div class="q1-section-heading q1-section-heading-row">
-      <div>
-        <p class="q1-eyebrow">ĐỘI NGŨ PHÁT TRIỂN &amp; CÔNG NGHỆ</p>
-        <h2>Tri Ân Thành Viên &amp; Công Cụ</h2>
-        <p class="q1-section-lede">Sản phẩm cẩm nang số Quận 1 được thực hiện bởi nhiệt huyết của các thành viên cùng sự hỗ trợ từ các công cụ công nghệ hiện đại.</p>
-      </div>
-      <span class="q1-section-index" aria-hidden="true">04 / ĐỘI NGŨ</span>
-    </div>
+    <section class="q1-section q1-tribute-section" id="tribute">
+      <div class="q1-container">
+        <div class="q1-section-heading q1-section-heading-row">
+          <div>
+            <p class="q1-eyebrow">ĐỘI NGŨ PHÁT TRIỂN &amp; CÔNG NGHỆ</p>
+            <h2>Tri Ân Thành Viên &amp; Công Cụ</h2>
+            <p class="q1-section-lede">Sản phẩm cẩm nang số Quận 1 được thực hiện bởi nhiệt huyết của các thành viên cùng sự hỗ trợ từ các công cụ công nghệ hiện đại.</p>
+          </div>
+          <span class="q1-section-index" aria-hidden="true">04 / ĐỘI NGŨ</span>
+        </div>
 
-    <!-- Team Members Grid -->
-    <div class="q1-team-grid">
-      <!-- Web Developers -->
-      <div class="q1-team-card">
-        <div class="q1-team-role-tag">
-          <span class="q1-role-icon">⚡</span>
-          <span>XÂY DỰNG WEBSITE</span>
-        </div>
-        <h3 class="q1-team-role-title">Lập Trình &amp; Giao Diện</h3>
-        <ul class="q1-member-list">
-          <li>
-            <div class="q1-avatar">ND</div>
-            <div class="q1-member-info">
-              <strong>Lê Nhật Di</strong>
-              <small>Web Developer / Frontend</small>
+        <div class="q1-team-grid">
+          <div class="q1-team-card">
+            <div class="q1-team-role-tag">
+              <span class="q1-role-icon">⚡</span>
+              <span>XÂY DỰNG WEBSITE</span>
             </div>
-          </li>
-          <li>
-            <div class="q1-avatar">AK</div>
-            <div class="q1-member-info">
-              <strong>Ngô Hà Anh Khoa</strong>
-              <small>Web Developer / UI &amp; UX</small>
-            </div>
-          </li>
-        </ul>
-      </div>
+            <h3 class="q1-team-role-title">Lập Trình &amp; Giao Diện</h3>
+            <ul class="q1-member-list">
+              <li>
+                <div class="q1-avatar">ND</div>
+                <div class="q1-member-info">
+                  <strong>Lê Nhật Di</strong>
+                  <small>Web Developer / Frontend</small>
+                </div>
+              </li>
+              <li>
+                <div class="q1-avatar">AK</div>
+                <div class="q1-member-info">
+                  <strong>Ngô Hà Anh Khoa</strong>
+                  <small>Web Developer / UI &amp; UX</small>
+                </div>
+              </li>
+            </ul>
+          </div>
 
-      <!-- Information Researchers -->
-      <div class="q1-team-card">
-        <div class="q1-team-role-tag">
-          <span class="q1-role-icon">🔍</span>
-          <span>TÌM KIẾM THÔNG TIN</span>
-        </div>
-        <h3 class="q1-team-role-title">Nội Dung &amp; Tư Liệu</h3>
-        <ul class="q1-member-list">
-          <li>
-            <div class="q1-avatar">MK</div>
-            <div class="q1-member-info">
-              <strong>Cao Minh Khôi</strong>
-              <small>Content Researcher</small>
+          <div class="q1-team-card">
+            <div class="q1-team-role-tag">
+              <span class="q1-role-icon">🔍</span>
+              <span>TÌM KIẾM THÔNG TIN</span>
             </div>
-          </li>
-          <li>
-            <div class="q1-avatar">TD</div>
-            <div class="q1-member-info">
-              <strong>Nguyễn Hoàng Tùng Dương</strong>
-              <small>Content Researcher</small>
-            </div>
-          </li>
-        </ul>
-      </div>
+            <h3 class="q1-team-role-title">Nội Dung &amp; Tư Liệu</h3>
+            <ul class="q1-member-list">
+              <li>
+                <div class="q1-avatar">MK</div>
+                <div class="q1-member-info">
+                  <strong>Cao Minh Khôi</strong>
+                  <small>Content Researcher</small>
+                </div>
+              </li>
+              <li>
+                <div class="q1-avatar">TD</div>
+                <div class="q1-member-info">
+                  <strong>Nguyễn Hoàng Tùng Dương</strong>
+                  <small>Content Researcher</small>
+                </div>
+              </li>
+            </ul>
+          </div>
 
-      <!-- Image Researchers -->
-      <div class="q1-team-card">
-        <div class="q1-team-role-tag">
-          <span class="q1-role-icon">🎨</span>
-          <span>TÌM KIẾM HÌNH ẢNH</span>
-        </div>
-        <h3 class="q1-team-role-title">Hình Ảnh &amp; Truyền Thông</h3>
-        <ul class="q1-member-list">
-          <li>
-            <div class="q1-avatar">DD</div>
-            <div class="q1-member-info">
-              <strong>Nguyễn Đăng Duy</strong>
-              <small>Visual &amp; Asset Curator</small>
+          <div class="q1-team-card">
+            <div class="q1-team-role-tag">
+              <span class="q1-role-icon">🎨</span>
+              <span>TÌM KIẾM HÌNH ẢNH</span>
             </div>
-          </li>
-          <li>
-            <div class="q1-avatar">NK</div>
-            <div class="q1-member-info">
-              <strong>Nguyễn Trần Nhật Khang</strong>
-              <small>Visual &amp; Asset Curator</small>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </div>
+            <h3 class="q1-team-role-title">Hình Ảnh &amp; Truyền Thông</h3>
+            <ul class="q1-member-list">
+              <li>
+                <div class="q1-avatar">DD</div>
+                <div class="q1-member-info">
+                  <strong>Nguyễn Đăng Duy</strong>
+                  <small>Visual &amp; Asset Curator</small>
+                </div>
+              </li>
+              <li>
+                <div class="q1-avatar">NK</div>
+                <div class="q1-member-info">
+                  <strong>Nguyễn Trần Nhật Khang</strong>
+                  <small>Visual &amp; Asset Curator</small>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
 
-    <!-- Tech Stack & AI Tools Showcase -->
-    <div class="q1-tech-showcase">
-      <div class="q1-tech-header">
-        <h3>Công Cụ &amp; Phần Mềm Hỗ Trợ</h3>
-        <p>Hệ sinh thái công nghệ AI và nền tảng lập trình đồng hành trong quá trình xây dựng dự án</p>
-      </div>
+        <div class="q1-tech-showcase">
+          <div class="q1-tech-header">
+            <h3>Công Cụ &amp; Phần Mềm Hỗ Trợ</h3>
+            <p>Hệ sinh thái công nghệ AI và nền tảng lập trình đồng hành trong quá trình xây dựng dự án</p>
+          </div>
 
-      <div class="q1-tech-badges">
-        <div class="q1-tech-pill">
-          <span class="q1-tech-icon">🤖</span>
-          <span>ChatGPT</span>
-        </div>
-        <div class="q1-tech-pill">
-          <span class="q1-tech-icon">✨</span>
-          <span>Gemini</span>
-        </div>
-        <div class="q1-tech-pill">
-          <span class="q1-tech-icon">🚀</span>
-          <span>Copilot</span>
-        </div>
-        <div class="q1-tech-pill">
-          <span class="q1-tech-icon">💻</span>
-          <span>Replit</span>
-        </div>
-        <div class="q1-tech-pill">
-          <span class="q1-tech-icon">📝</span>
-          <span>Visual Studio Code</span>
-        </div>
-        <div class="q1-tech-pill">
-          <span class="q1-tech-icon">🐙</span>
-          <span>GitHub</span>
+          <div class="q1-tech-badges">
+            <div class="q1-tech-pill"><span class="q1-tech-icon">🤖</span><span>ChatGPT</span></div>
+            <div class="q1-tech-pill"><span class="q1-tech-icon">✨</span><span>Gemini</span></div>
+            <div class="q1-tech-pill"><span class="q1-tech-icon">🚀</span><span>Copilot</span></div>
+            <div class="q1-tech-pill"><span class="q1-tech-icon">💻</span><span>Replit</span></div>
+            <div class="q1-tech-pill"><span class="q1-tech-icon">📝</span><span>Visual Studio Code</span></div>
+            <div class="q1-tech-pill"><span class="q1-tech-icon">🐙</span><span>GitHub</span></div>
+          </div>
         </div>
       </div>
-    </div>
-
-  </div>
-</section>
+    </section>
   </footer>
 
   <!-- Location Detail Drawer Modal -->
-  <div id="hmDrawerDrawer" class="hm-drawer" aria-hidden="true" style="display:none"></div>
   <div id="hmDetailDrawer" class="hm-drawer" aria-hidden="true">
     <div class="hm-drawer-backdrop" data-hm-close></div>
     <aside class="hm-drawer-panel" role="dialog" aria-modal="true" aria-labelledby="hmDrawerTitle" tabindex="-1">
@@ -451,7 +429,6 @@
   </div>
 
   <!-- JavaScript bundles -->
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
   <script src="assets/js/hero-morph.js" defer></script>
   <script src="assets/js/district1-home.js" defer></script>
 </body>
